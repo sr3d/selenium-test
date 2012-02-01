@@ -1,0 +1,31 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.0.0)
+    childprocess (0.3.0)
+      ffi (~> 1.0.6)
+    ci_reporter (1.6.9)
+      builder (>= 2.1.2)
+    ffi (1.0.11)
+    multi_json (1.0.4)
+    parallel (0.5.12)
+    parallel_tests (0.6.17)
+      parallel
+    rubyzip (0.9.5)
+    selenium-webdriver (2.18.0)
+      childprocess (>= 0.2.5)
+      ffi (~> 1.0.9)
+      multi_json (~> 1.0.4)
+      rubyzip
+    shoulda (2.11.3)
+    test-unit (2.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ci_reporter
+  parallel_tests
+  selenium-webdriver
+  shoulda
+  test-unit (~> 2.0.0)

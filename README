@@ -1,0 +1,79 @@
+1.  Run Selenium hub
+
+java -jar selenium-server-standalone-2.14.0.jar -role hub 
+
+This will start the server on port 44444
+
+2.  Start the nodes, and pointing to the hub
+
+a.  java -jar selenium-server-standalone-2.14.0.jar -role node -hub http://localhost:4444/grid/register \
+     -browser browserName=firefox,version=3.6,platform=OSX,maxInstances=4
+     
+     
+Example browser setting: 
+Multiple browsers support: 
+-browser browserName=firefox,version=3.6,firefox_binary=/home/myhomedir/firefox36/firefox,maxInstances=3,platform=LINUX -browser browserName=firefox,version=4,firefox_binary=/home/myhomedir/firefox4/firefox,maxInstances=4,platform=LINUX
+
+
+-browser browserName=internet explorer,version=8,platform=WINDOWS
+
+
+b.  Starting node with json setting:
+
+java -jar selenium-server-standalone-2.0rc3.jar -role webdriver -nodeConfig myconfig.json -hub http://127.0.0.1:4444/grid/register
+
+
+{ 
+  "capabilities":
+        [
+                {
+                        "browserName":"firefox",
+                        "maxInstances":5
+                },
+                {
+                        "browserName":"chrome",
+                        "maxInstances":5
+                },
+                {
+                        "browserName":"internet explorer",
+                        "version":"7",
+                        "platform":"WINDOWS",
+                        "maxInstances":1
+                }
+        ],
+"configuration":
+        {
+                "cleanUpCycle":2000,
+                "timeout":30000,
+                "proxy":"org.openqa.grid.selenium.proxy.WebDriverRemoteProxy",
+                "maxSession":5,
+                "url":"http://192.168.102.130:5555/wd/hub",
+        }
+}
+
+3.  Write test
+
+
+4.  Running in parallel:
+
+  bundle exec parallel_test tests/*
+  
+  or rake dance
+
+Setting up Locally
+
+1.  Run bundle install to install all the required gems
+2.  Run 
+
+    ruby test.rb 
+
+
+http://code.google.com/p/selenium/wiki/RubyBindings
+
+
+References:
+1.  http://opensourcetester.co.uk/2011/07/06/selenium-grid-2/
+2.  http://code.google.com/p/selenium/wiki/Grid2
+
+
+1.  Have to setup the path to the chromedriver accordingly.

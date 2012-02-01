@@ -1,0 +1,2 @@
+@echo off
+java -jar ../vendor/selenium-2.17.0/selenium-server-standalone-2.17.0.jar -role node -hub http://Alex-Les-MacBook-Pro.local:4444/grid/register -browser "browserName=firefox,platform=WINDOWS,maxInstances=5"  -port 5556
