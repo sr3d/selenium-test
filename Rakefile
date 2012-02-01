@@ -42,7 +42,7 @@ end
 
 task :parallel_test do
   # cmd = "bundle exec parallel_test -o --require ci/reporter/rake/test_unit_loader tests/test_*"
-  cmd = "bundle exec parallel_test tests/test_*"
+  cmd = "bundle exec parallel_test tests/test_mac_firefox.rb"
   # cmd = "CI_REPORTS=reports && bundle exec parallel_test tests/test_mac_chrome.rb"
   
   # clean up tests log
