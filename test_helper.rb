@@ -11,9 +11,9 @@ require "selenium-webdriver"
 HOST_NAME = Socket.gethostname
 IS_CI = HOST_NAME == 'dev1.wordnik.com'
 
-# HUB_URL = "http://127.0.0.1:4444/wd/hub"
+HUB_URL = "http://127.0.0.1:4444/wd/hub"
 
-HUB_URL = "http://127.0.0.1:4445/wd/hub"
+# HUB_URL = "http://127.0.0.1:4445/wd/hub"
 
 module TestSmartwords
   def teardown
