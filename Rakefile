@@ -13,16 +13,18 @@ task :start_server do
   puts "Starting server with cmd:   #{cmd}"
   system cmd
 end
+task :server => :start_server
 
 
 task :start_firefox_client do
   # java -jar selenium-server-standalone-2.14.0.jar -role node -hub http://localhost:4444/grid/register \
   #      -browser browserName=firefox,version=3.6,platform=OSX,maxInstances=4
-  browser_settings = "browserName=firefox,platform=OSX,maxInstances=5"
+  browser_settings = "browserName=firefox,maxInstances=5"
   cmd = "java -jar #{selenium_executable} -role node -hub #{hub_register_url} -browser #{browser_settings}"
   puts "Starting node with cmd:   #{cmd}"
   system cmd
 end
+task :firefox => :start_firefox_and_chrome_client
 
 
 task :start_firefox_and_chrome_client do
