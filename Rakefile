@@ -4,7 +4,7 @@ selenium_executable = "./vendor/selenium-2.17.0/selenium-server-standalone-2.17.
 # hub_register_url = "http://local.wordnik.com:4444/grid/register"
 
 # At home
-hub_register_url = "http://Alex-Les-MacBook-Pro.local:4444/grid/register"
+hub_register_url = "http://127.0.0.1:4444/grid/register"
 
 # platforms are:  ANDROID, LINUX, MAC, UNIX, VISTA, WINDOWS, XP, any
 

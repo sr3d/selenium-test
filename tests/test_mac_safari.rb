@@ -5,7 +5,8 @@ class TestSafari < Test::Unit::TestCase
   include TestSmartwords
   
   def setup
-    caps = Selenium::WebDriver::Remote::Capabilities.safari :platform => 'MAC'
-    @browser = Selenium::WebDriver.for(:remote, :url => HUB_URL, :desired_capabilities => caps)
+    
+    # caps = Selenium::WebDriver::Remote::Capabilities.new :browser_name => 'safari', :platform => 'WINDOWS'
+    # @browser = Selenium::WebDriver.for(:remote, :url => HUB_URL, :desired_capabilities => caps)
   end
 end
