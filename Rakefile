@@ -43,15 +43,9 @@ end
 
 
 task :parallel_test do
-  # cmd = "bundle exec parallel_test -o --require ci/reporter/rake/test_unit_loader tests/test_*"
-  cmd = "bundle exec parallel_test tests/test_mac_*.rb"
-  # cmd = "CI_REPORTS=reports && bundle exec parallel_test tests/test_mac_chrome.rb"
-  
-  # clean up tests log
+  cmd = "bundle exec parallel_test tests/test_*.rb"
+
   FileUtils.rm_rf "test/reports"
-  
-  
-  # cmd = "bundle exec parallel_test -t test -o '--require ci/reporter/rake/test_unit_loader --format CI::Reporter::TestUnit' tests/test_mac_chrome.rb"
   puts "Executing test with cmd: \n #{cmd}"
   system cmd
 end

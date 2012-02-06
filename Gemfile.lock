@@ -1,17 +1,31 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    archive-tar-minitar (0.5.2)
     builder (3.0.0)
     childprocess (0.3.0)
       ffi (~> 1.0.6)
     ci_reporter (1.6.9)
       builder (>= 2.1.2)
+    columnize (0.3.6)
     ffi (1.0.11)
+    linecache19 (0.5.13)
+      ruby_core_source (>= 0.1.4)
     multi_json (1.0.4)
     parallel (0.5.12)
     parallel_tests (0.6.17)
       parallel
     rake (0.9.2.2)
+    ruby-debug-base19 (0.11.26)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.5)
+      archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.5)
     selenium-webdriver (2.18.0)
       childprocess (>= 0.2.5)
@@ -28,6 +42,7 @@ DEPENDENCIES
   ci_reporter
   parallel_tests
   rake
+  ruby-debug19
   selenium-webdriver
   shoulda
   test-unit (~> 2.0.0)
