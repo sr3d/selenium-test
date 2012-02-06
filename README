@@ -77,3 +77,15 @@ References:
 
 
 1.  Have to setup the path to the chromedriver accordingly.
+
+
+
+
+==================
+With Saucelabs
+username:  alex_wordnik
+password:  abc123
+
+1.  Run the jar
+2.  update the caps object to include the username and access keys
+3.  
