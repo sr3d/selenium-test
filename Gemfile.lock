@@ -11,7 +11,7 @@ GEM
     parallel (0.5.12)
     parallel_tests (0.6.17)
       parallel
-    rake (0.9.2.2)
+    rake (12.3.3)
     rubyzip (0.9.5)
     selenium-webdriver (2.18.0)
       childprocess (>= 0.2.5)
